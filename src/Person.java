@@ -12,4 +12,36 @@ public abstract class Person {
 		this.familyName = familyName;
 		this.weight = weight;
 	}
+
+	private int getHeight() {
+		return height;
+	}
+
+	private void setHeight(int height) {
+		this.height = height;
+	}
+
+	private String getFirstName() {
+		return firstName;
+	}
+
+	private void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	private String getFamilyName() {
+		return familyName;
+	}
+
+	private void setFamilyName(String familyName) {
+		this.familyName = familyName;
+	}
+
+	private double getWeight() {
+		return weight;
+	}
+
+	private void setWeight(double weight) {
+		this.weight = weight;
+	}
 }
