@@ -1,47 +1,49 @@
+import java.awt.Color;
 
 public abstract class Person {
 	
-	private int height; //inches
 	private String firstName, familyName;
-	private double weight;
+	private Color eyeColor;
+	private int IQ; 
 	
-	public Person(int height, String firstName, String familyName, double weight)
+	public Person(String firstName, String familyName, Color eyeColor, int IQ)
 	{
-		this.height = height;
 		this.firstName = firstName;
 		this.familyName = familyName;
-		this.weight = weight;
+		this.eyeColor = eyeColor;
+		this.IQ = IQ;
 	}
 
-	private int getHeight() {
-		return height;
-	}
 
-	private void setHeight(int height) {
-		this.height = height;
-	}
-
-	private String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	private void setFirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	private String getFamilyName() {
+	public String getFamilyName() {
 		return familyName;
 	}
 
-	private void setFamilyName(String familyName) {
+	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
 	}
 
-	private double getWeight() {
-		return weight;
+	public Color getEyeColor() {
+		return eyeColor;
 	}
 
-	private void setWeight(double weight) {
-		this.weight = weight;
+	public void setEyeColor(Color eyeColor) {
+		this.eyeColor = eyeColor;
+	}
+
+	public int getIQ() {
+		return IQ;
+	}
+
+	public void setIQ(int iQ) {
+		IQ = iQ;
 	}
 }
