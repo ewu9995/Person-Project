@@ -21,8 +21,8 @@ public class Student extends Person{
 	private int getAPClasses() {
 		return APClasses;
 	}
-	private void setAPClasses(int aPClasses) {
-		APClasses = aPClasses;
+	private void setAPClasses(int APClasses) {
+		APClasses = APClasses;
 	}
 	public double getGPA() {
 		return GPA;
@@ -31,7 +31,7 @@ public class Student extends Person{
 		GPA = GPA;
 	}
 	public String toString() {
-		return null;
+		return getFamilyName() +"," + getFirstName();
 		
 	}
 	

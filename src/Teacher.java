@@ -30,7 +30,7 @@ public class Teacher extends Person{
 
 	public String toString() {
 		// TODO Auto-generated method stub
-		return null;
+		return getTitle()+"."+getFamilyName();
 	}
 
 }
