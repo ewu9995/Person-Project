@@ -1,9 +1,10 @@
+import java.awt.Color;
 
 public class Teacher extends Person{
 
-	public Teacher(int height, String firstName, String familyName, double weight) 
+	public Teacher(String firstName, String familyName, Color eyeColor, int IQ) 
 	{
-		super(height, firstName, familyName, weight);
+		super(firstName, familyName, eyeColor, IQ);
 	}
 
 }

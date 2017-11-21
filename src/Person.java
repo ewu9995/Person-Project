@@ -46,4 +46,7 @@ public abstract class Person {
 	public void setIQ(int iQ) {
 		IQ = iQ;
 	}
+	
+	public abstract String toString(); 
+	
 }
