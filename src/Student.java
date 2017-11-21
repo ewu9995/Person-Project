@@ -4,28 +4,31 @@ import java.awt.Color;
 public class Student extends Person{
 	private double GPA;
 	private int ACT;
-	private int APclasses;
-	public int getACT() {
+	private int APClasses;
+	
+	public Student(String firstName, String familyName, Color eyeColor, int IQ, double GPA, int ACT, int APClasses) {
+		super(firstName, familyName, eyeColor, IQ);
+		this.ACT = ACT;
+		this.GPA = GPA;
+		this.APClasses = APClasses;
+	}
+	private int getACT() {
 		return ACT;
 	}
-	public void setACT(int ACT) {
-		this.ACT = ACT;
+	private void setACT(int ACT) {
+		ACT = ACT;
 	}
-	public int getAPclasses() {
-		return APclasses;
+	private int getAPClasses() {
+		return APClasses;
 	}
-	public setAPclasses(int aPclasses) {
-		this.APclasses = aPclasses;
-	}
-	public Student(String firstName, String familyName, Color eyeColor, int IQ) {
-		super(firstName, familyName, eyeColor, IQ, ACT, APclasses);
-		// TODO Auto-generated constructor stub
+	private void setAPClasses(int aPClasses) {
+		APClasses = aPClasses;
 	}
 	public double getGPA() {
 		return GPA;
 	}
-	public void setGPA(double gPA) {
-		GPA = gPA;
+	public void setGPA(double GPA) {
+		GPA = GPA;
 	}
 	public String toString() {
 		return null;
