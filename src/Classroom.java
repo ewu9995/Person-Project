@@ -15,7 +15,9 @@ public class Classroom {
 	}
 	
 	public double classAverage() {
+		for(int x = 0 ; x <= this.students; x++ )
 		return 0;
+		
 	}
 	
 	public String printClass() {
