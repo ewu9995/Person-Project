@@ -18,6 +18,7 @@ public class Classroom {
 		int average = 0;
 		for(int x = 0 ; x <= students.length; x++)
 		average++;
+		Student.GPa;
 		return average/students.length;
 		
 	}

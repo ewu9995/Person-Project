@@ -1,5 +1,5 @@
 import java.awt.Color;
-
+import java.lang.Math;
 
 public class Student extends Person{
 	private double GPA;
@@ -13,22 +13,24 @@ public class Student extends Person{
 		this.APClasses = APClasses;
 	}
 	private int getACT() {
-		return ACT;
+		ACT = (int)(Math.random())*36+1;
+			return ACT;
 	}
 	private void setACT(int ACT) {
-		ACT = ACT;
+		this.ACT = ACT;
 	}
 	private int getAPClasses() {
+		APClasses = (int)(Math.random()*11);
 		return APClasses;
 	}
 	private void setAPClasses(int APClasses) {
-		APClasses = APClasses;
+		this.APClasses = APClasses;
 	}
 	public double getGPA() {
 		return GPA;
 	}
 	public void setGPA(double GPA) {
-		GPA = GPA;
+		this.GPA = GPA;
 	}
 	public String toString() {
 		return getFamilyName() +"," + getFirstName();
