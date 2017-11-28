@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.Random;
 
 public class Teacher extends Person{
 	
@@ -13,16 +14,26 @@ public class Teacher extends Person{
 	}
 
 	private String getSubject() {
-		return subject;
+		Random r = new Random ();
+		{	
+			return subjects [r.nextInt(subjects.length)];
+		}
 	}
+	
+	private String [] subjects = {"AP Computer Science", "Chemistry", "AP Calculus", "Macro Economics", "Physical Education", "AP United States History", "Statistics", "Algebra", "Geometry", "Global Studies"};
 
 	private void setSubject(String subject) {
 		this.subject = subject;
 	}
 
 	private String getTitle() {
-		return title;
+		Random r = new Random ();
+		{	
+			return titles [r.nextInt(titles.length)];
+		}
 	}
+	
+	private String [] titles = {"Mr", "Mrs", "Ms", "Miss", "Dr", "Professor"};
 
 	private void setTitle(String title) {
 		this.title = title;
@@ -30,7 +41,7 @@ public class Teacher extends Person{
 
 	public String toString() {
 		// TODO Auto-generated method stub
-		return getTitle()+"."+getFamilyName();
+		return title +"."+getFamilyName();
 	}
 
 }

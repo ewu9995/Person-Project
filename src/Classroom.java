@@ -15,13 +15,15 @@ public class Classroom {
 	}
 	
 	public double classAverage() {
-		for(int x = 0 ; x <= this.students; x++ )
-		return 0;
+		int average = 0;
+		for(int x = 0 ; x <= students.length; x++)
+		average++;
+		return average/students.length;
 		
 	}
 	
 	public String printClass() {
-		return null;
+		return teacher + getSubject() + students.length;
 		
 	}
 	
