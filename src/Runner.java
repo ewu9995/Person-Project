@@ -7,10 +7,9 @@ public class Runner {
 		Person Student = new Student(null, null, null, 0, 0, 0, 0);
 		Classroom Classroom = new Classroom(null, null, null, 0, null, Student);
 		
-		System.out.print (Classroom.printClass() + Classroom.classAverage());
-		
-		randomStudent();    
-
+		System.out.print (Classroom.printClass() + Classroom.classAverage() );
+		randomStudent();
+	
 	}
 	
 	public static String randomStudent() {

@@ -18,15 +18,15 @@ public class Classroom {
 		double average = 0.0;
 		for(Person p : this.students) {
 			if (p instanceof Student) {
-				average = average + ((Student) p).getGPA();
-			}
+				average = average + Student.getGPA();
+				}
 			}
 		return average/students.length;
 		
 	}
 	
 	public String printClass() {
-		return teacher + getSubject() + students.length;
+		return teacher + getSubject() + students;
 		
 	}
 	
