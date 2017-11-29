@@ -11,17 +11,17 @@ public class Classroom {
 	}
 	
 	public String getSubject() {
-		return null;	 
+		return ((Teacher) teacher).getSubject();	 
 	}
 	
 	public double classAverage() {
-		double average = 0.0;
+		double total = 0.0;
 		for(Person p : this.students) {
 			if (p instanceof Student) {
-				average = average + Student.getGPA();
+				total += Student.getGPA();
 				}
 			}
-		return average/students.length;
+		return total/students.length;
 		
 	}
 	
