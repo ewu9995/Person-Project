@@ -5,26 +5,26 @@ import java.util.Random;
 
 public abstract class Person {
 	
-	private String firstName;
+	private static String firstName;
 	private static String familyName;
 	private Color eyeColor;
 	private int IQ; 
 	
 	public Person(String firstName, String familyName, Color eyeColor, int IQ)
 	{
-		this.firstName = firstName;
+		Person.firstName = firstName;
 		Person.familyName = familyName;
 		this.eyeColor = eyeColor;
 		this.IQ = IQ;
 	}
 
 
-	public String getFirstName() {
+	public static String getFirstName() {
 		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		Person.firstName = firstName;
 	}
 
 	public static String getFamilyName() {

@@ -18,17 +18,13 @@ public class Student extends Person{
 		ACT = (int)(Math.random())*36+1;
 			return ACT;
 	}
-	private void setACT(int ACT) {
-		this.ACT = ACT;
-	}
+
 	private int getAPClasses() {
-		//highest # of AP claases is 10
+		//highest # of AP classes is 10
 		APClasses = (int)(Math.random()*11);
 		return APClasses;
 	}
-	private void setAPClasses(int APClasses) {
-		this.APClasses = APClasses;
-	}
+
 	
 	public static double getGPA() {
 		Random r = new Random();
@@ -36,9 +32,7 @@ public class Student extends Person{
 		double GPA = (r.nextInt(1210)) / 10;
 		return GPA;
 	}
-	public void setGPA(double GPA) {
-		this.GPA = GPA;
-	}
+
 	public String toString() {
 		return getFamilyName() +"," + getFirstName();
 		
