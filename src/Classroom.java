@@ -11,14 +11,13 @@ public class Classroom {
 	}
 	
 	public String getSubject() {
-		return null;	
+		return null;	 
 	}
 	
 	public double classAverage() {
-		int average = 0;
+		double average = 0;
 		for(int x = 0 ; x <= students.length; x++)
-		average++;
-		Student.GPa;
+			average += Student.getGPA();
 		return average/students.length;
 		
 	}
