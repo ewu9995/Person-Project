@@ -13,7 +13,15 @@ public class Teacher extends Person{
 		this.title = title;
 	}
 
-	String getSubject() { 
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getSubject() { 
 		return subject;
 	}
 	
@@ -22,7 +30,7 @@ public class Teacher extends Person{
 	}
 	
 	public String toString() {
-		return title +"."+getFamilyName();
+		return title +"."+ getFamilyName();
 	}
 
 }

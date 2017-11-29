@@ -13,6 +13,15 @@ public class Student extends Person{
 		this.GPA = GPA;
 		this.APClasses = APClasses;
 	}
+	public void setGPA(double gPA) {
+		GPA = gPA;
+	}
+	public void setACT(int aCT) {
+		ACT = aCT;
+	}
+	public void setAPClasses(int aPClasses) {
+		APClasses = aPClasses;
+	}
 	private int getACT() { 
 		// act 1-36
 		ACT = (int)(Math.random())*36+1;
