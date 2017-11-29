@@ -55,7 +55,7 @@ public abstract class Person {
 	}
 
 	public void setIQ(int IQ) {
-		IQ = IQ;
+		this.IQ = IQ;
 	}
 	
 	public abstract String toString(); 

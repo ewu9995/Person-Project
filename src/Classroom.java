@@ -15,9 +15,12 @@ public class Classroom {
 	}
 	
 	public double classAverage() {
-		double average = 0;
-		for(int x = 0 ; x <= students.length; x++)
-			average += Student.getGPA();
+		double average = 0.0;
+		for(Person p : this.students) {
+			if (p instanceof Student) {
+				average = average + ((Student) p).getGPA();
+			}
+			}
 		return average/students.length;
 		
 	}
