@@ -13,7 +13,7 @@ public class Teacher extends Person{
 		this.title = title;
 	}
 
-	private String getSubject() {
+	private String getSubject() { 
 		Random r = new Random ();
 		{	
 			return subjects [r.nextInt(subjects.length)];
