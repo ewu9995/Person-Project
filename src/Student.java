@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.lang.Math;
+import java.util.Random;
 
 public class Student extends Person{
 	private double GPA;
@@ -12,7 +13,8 @@ public class Student extends Person{
 		this.GPA = GPA;
 		this.APClasses = APClasses;
 	}
-	private int getACT() {
+	private int getACT() { 
+		// act 1-36
 		ACT = (int)(Math.random())*36+1;
 			return ACT;
 	}
@@ -20,13 +22,18 @@ public class Student extends Person{
 		this.ACT = ACT;
 	}
 	private int getAPClasses() {
+		//highest # of AP claases is 10
 		APClasses = (int)(Math.random()*11);
 		return APClasses;
 	}
 	private void setAPClasses(int APClasses) {
 		this.APClasses = APClasses;
 	}
-	public double getGPA() {
+	
+	public static double getGPA() {
+		Random r = new Random();
+		//highest gpa is 100 x 1.1 which is 110
+		double GPA = (r.nextInt(1210)) / 10;
 		return GPA;
 	}
 	public void setGPA(double GPA) {
