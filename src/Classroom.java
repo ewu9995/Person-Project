@@ -11,7 +11,7 @@ public class Classroom {
 	}
 	
 	public String getSubject() {
-		return ((Teacher) this.teacher).getSubject();	 
+		return ((Teacher) teacher).getSubject();	 
 	}
 	
 	public double classAverage() {
@@ -21,7 +21,7 @@ public class Classroom {
 				total += Student.getGPA();
 				}
 			}
-		return total/this.students.length;
+		return total/students.length;
 		
 	}
 	

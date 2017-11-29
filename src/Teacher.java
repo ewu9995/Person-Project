@@ -13,20 +13,20 @@ public class Teacher extends Person{
 		this.title = title;
 	}
 
+	public String getSubject() {
+		return subject;
+	}
+
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public String getTitle() {
+		return title;
 	}
 
-	public String getSubject() { 
-		return subject;
-	}
-	
-	private String getTitle() {
-		return title;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 	public String toString() {
