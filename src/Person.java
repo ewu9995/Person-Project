@@ -1,15 +1,19 @@
 import java.awt.Color;
+import java.lang.Math;
+import java.util.Random;
+
 
 public abstract class Person {
 	
-	private String firstName, familyName;
+	private String firstName;
+	private static String familyName;
 	private Color eyeColor;
 	private int IQ; 
 	
 	public Person(String firstName, String familyName, Color eyeColor, int IQ)
 	{
 		this.firstName = firstName;
-		this.familyName = familyName;
+		Person.familyName = familyName;
 		this.eyeColor = eyeColor;
 		this.IQ = IQ;
 	}
@@ -23,15 +27,21 @@ public abstract class Person {
 		this.firstName = firstName;
 	}
 
-	public String getFamilyName() {
-		return familyName;
+	public static String getFamilyName() {
+		return familyName; 
 	}
 
 	public void setFamilyName(String familyName) {
-		this.familyName = familyName;
+		Person.familyName = familyName;
 	}
 
 	public Color getEyeColor() {
+		Random r = new Random();
+		int red = r.nextInt(256);
+		int green = r.nextInt(256);
+		int blue = r.nextInt(256);
+
+		Color eyeColor = new Color(red,green,blue);
 		return eyeColor;
 	}
 
@@ -40,11 +50,12 @@ public abstract class Person {
 	}
 
 	public int getIQ() {
+		IQ = (int)(Math.random() * 200 + 1);
 		return IQ;
 	}
 
-	public void setIQ(int iQ) {
-		IQ = iQ;
+	public void setIQ(int IQ) {
+		IQ = IQ;
 	}
 	
 	public abstract String toString(); 
