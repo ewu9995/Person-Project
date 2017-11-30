@@ -5,34 +5,35 @@ import java.util.Random;
 
 public abstract class Person {
 	
-	private static String firstName;
-	private static String familyName;
+	private String firstName;
+	private String familyName;
 	private Color eyeColor;
 	private int IQ; 
 	
 	public Person(String firstName, String familyName, Color eyeColor, int IQ)
 	{
-		Person.firstName = firstName;
-		Person.familyName = familyName;
+		
+		this.firstName = firstName;
+		this.familyName = familyName;
 		this.eyeColor = eyeColor;
 		this.IQ = IQ;
 	}
 
 
-	public static String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		Person.firstName = firstName;
+		this.firstName = firstName;
 	}
 
-	public static String getFamilyName() {
+	public String getFamilyName() {
 		return familyName; 
 	}
 
 	public void setFamilyName(String familyName) {
-		Person.familyName = familyName;
+		this.familyName = familyName;
 	}
 
 	public Color getEyeColor() {
