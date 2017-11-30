@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.util.Random;
 
 public class Teacher extends Person{
 	
@@ -30,7 +29,7 @@ public class Teacher extends Person{
 	}
 	
 	public String toString() {
-		return title +"."+ getFamilyName();
+		return getTitle() +"." + " "+ getFamilyName();
 	}
 
 }

@@ -35,7 +35,7 @@ public class Student extends Person{
 	}
 
 	
-	public static double getGPA() {
+	double getGPA() {
 		Random r = new Random();
 		//highest gpa is 100 x 1.1 which is 110
 		double GPA = (r.nextInt(1210)) / 10;
