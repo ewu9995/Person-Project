@@ -10,17 +10,17 @@ public class Classroom {
 	
 	public String getSubject() {
 		return ((Teacher) teacher).getSubject();	 
-	}
+	} 
 	
 	public double classAverage()
-	{
+	{ 
 		double total = 0.0;
-		for (Person p : this.students)
-			if ( p instanceof Student)
-			{
-					total += ((Student)p).getGPA();
-			}	
-		return total / students.length;
+		for (Person p : this.students) {
+		if (p instanceof Student){
+				total += ((Student)p).getGPA();
+			}
+		}
+		return total/students.length;
 	}
 	
 	public String printClass() {
