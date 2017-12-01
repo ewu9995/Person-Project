@@ -28,6 +28,7 @@ public class Teacher extends Person{
 		this.title = title;
 	}
 	
+	@Override
 	public String toString() {
 		return getTitle() +"." + " "+ getFamilyName();
 	}
