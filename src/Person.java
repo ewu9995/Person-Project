@@ -7,6 +7,7 @@ public abstract class Person {
 	
 	private String firstName;
 	private String familyName;
+	@SuppressWarnings("unused")
 	private Color eyeColor;
 	private int IQ; 
 	
@@ -18,7 +19,7 @@ public abstract class Person {
 		this.eyeColor = eyeColor;
 		this.IQ = IQ;
 	}
-
+ 
 
 	public String getFirstName() {
 		return firstName;
