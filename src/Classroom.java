@@ -24,6 +24,7 @@ public class Classroom {
 	}
 	
 	public String printClass() {
+		
 		return ((Teacher) teacher).toString() + getSubject() + students.length;
 		
 	}

@@ -31,15 +31,18 @@ public class Runner {
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, title[r.nextInt(title.length)], 
 				subject[r.nextInt(subject.length)]);
+		Classroom c = new Classroom(null , s);
+	
 		
-		System.out.println("Subject and Teacher:");
-		System.out.println(t);
+		System.out.println("Teacher:");
+		System.out.println(t.toString());
 		
 		System.out.println("Students in Class:");
-		System.out.println(s); 
+		System.out.println(c.printClass()); 
+		
 		
 		System.out.println("Class Average:");
-		
+		System.out.println(c.classAverage());
 		
 		System.out.println(randomStudent());
 		
