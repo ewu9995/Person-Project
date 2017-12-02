@@ -17,8 +17,8 @@ public class Student extends Person{
 	public void setACT(int ACT) {
 		this.ACT = ACT;
 	}
-	public void setAPClasses(int aPClasses) {
-		APClasses = aPClasses;
+	public void setAPClasses(int APClasses) {
+		this.APClasses = APClasses;
 	}
 	public int getACT() { 
 			return ACT;

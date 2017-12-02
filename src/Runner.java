@@ -27,13 +27,20 @@ public class Runner {
 		//highest gpa is 100 x 1.1 which is 110
 		double GPA = (r3.nextInt(1210)) / 10;
 		
-		//variable is declared and initalized
+		//variable is declared and initialized
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, title[r.nextInt(title.length)], 
 				subject[r.nextInt(subject.length)]);
 		
-		System.out.println(s);
+		System.out.println("Subject and Teacher:");
 		System.out.println(t);
+		
+		System.out.println("Students in Class:");
+		System.out.println(s); 
+		
+		System.out.println("Class Average:");
+		
+		
 		System.out.println(randomStudent());
 		
 		
