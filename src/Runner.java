@@ -28,10 +28,11 @@ public class Runner {
 		double GPA = (r3.nextInt(1210)) / 10;
 		
 		//variable is declared and initialized
+		@SuppressWarnings("unused")
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, title[r.nextInt(title.length)], 
 				subject[r.nextInt(subject.length)]);
-		Classroom c = new Classroom(null , s);
+		Classroom c = new Classroom(null , t);
 	
 		
 		System.out.println("Teacher:");
