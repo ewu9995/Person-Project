@@ -11,11 +11,11 @@ public class Student extends Person{
 		this.GPA = GPA;
 		this.APClasses = APClasses;
 	}
-	public void setGPA(double gPA) {
-		GPA = gPA;
+	public void setGPA(double GPA) {
+		this.GPA = GPA;
 	}
-	public void setACT(int aCT) {
-		ACT = aCT;
+	public void setACT(int ACT) {
+		this.ACT = ACT;
 	}
 	public void setAPClasses(int aPClasses) {
 		APClasses = aPClasses;

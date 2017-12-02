@@ -23,7 +23,9 @@ public class Runner {
 		int blue = r2.nextInt(256);
 		Color eyeColor = new Color(red,green,blue);
 		
-		double GPA = (int)(Math.random() * 110 + 1);
+		Random r3 = new Random();
+		//highest gpa is 100 x 1.1 which is 110
+		double GPA = (r3.nextInt(1210)) / 10;
 		
 		//variable is declared and initalized
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
@@ -51,11 +53,13 @@ public class Runner {
 		int blue = r2.nextInt(256);
 		Color eyeColor = new Color(red,green,blue);
 		
-		double GPA = (int)(Math.random() * 110 + 1);
+		Random r3 = new Random();
+		//highest gpa is 100 x 1.1 which is 110
+		double GPA = (r3.nextInt(1210)) / 10;
 		
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		
-		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + " " +"GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
+		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + " " +", GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
 		}
 
 	}
