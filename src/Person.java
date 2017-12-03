@@ -60,6 +60,6 @@ public abstract class Person {
 		this.IQ = IQ;
 	}
 	
-	public abstract String toString(); 
-	
+	public abstract String toString();
+
 }

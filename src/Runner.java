@@ -123,16 +123,7 @@ public class Runner {
 		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + ";" +" GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
 		}
 	
-	public static double classAverage()
-	{ 
-		double total = 0.0;
-		for (Person p : Runner.students) {
-		if (p instanceof Student){
-			total += ((Student) p).getGPA();
-			}
-		}
-		return total/students.length;
-	}
+
 
 	}
 
