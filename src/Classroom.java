@@ -17,13 +17,13 @@ public class Classroom {
 		double total = 0.0;
 		for (Person p : this.students) {
 		if (p instanceof Student){
-				total += ((Student)p).getGPA();
+			total += ((Student) p).getGPA();
 			}
 		}
 		return total/students.length;
 	}
 	
-	public String printClass() {
+	public String printClass(Person[] students, Person teacher) {
 		
 		return ((Teacher) teacher).toString() + getSubject() + students.length;
 		
