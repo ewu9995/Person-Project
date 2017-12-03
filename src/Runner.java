@@ -3,9 +3,9 @@ import java.util.Random;
 
 public class Runner {
 
-	private static String[] firstName = {"First", "John", "Jane", "Sophia", "Olivia", "Emma", "Nathan", "Joe", "Steve", "Liam", "Noah", "Jake", "Logan", "David"};
-	private static String[] familyName = {"Last", "Doe", "Levin", "Obama", "Asher", "Newman", "Brown", "Williams", "Paul", "Smith", "Jones"};
-	private static String[] subject = {"AP Computer Science", "Chemistry", "AP Calculus", "Macro Economics", "Physical Education", "AP United States History", "Statistics", "Algebra", "Geometry", "Global Studies"};
+	private static String[] firstName = {"First", "John", "Bob", "Jane", "Sophia", "Olivia", "Emma", "Nathan", "Muhammad", "Elizabeth", "Chloe", "Ava", "Madison", "Amelia", "Victoria", "Joe", "Steve", "Liam", "Noah", "Jake", "Logan", "David"};
+	private static String[] familyName = {"Last", "Doe", "Levin", "Obama", "Asher", "Newman", "Jonhson", "Brown", "Williams", "Paul", "Smith", "Jones" , "Zhang" , "Wang" , "Chang", "Nguyen", "Garcia", "Gonzalez", "Hernandez", "Smith", "Smirnov", "Müller"};
+	private static String[] subject = {"AP Computer Science", "Chemistry", "Biology", "Physics", "English", "AP Calculus", "AP Literature", "Precalculus", "Macroeconomics", "U.S. Government and Politics",  "Physical Education", "AP United States History", "Statistics", "Algebra", "Geometry", "Global Studies"};
 	private static String[] title = {"Mr", "Mrs", "Ms", "Miss", "Dr", "Professor", "Mx"};
 	private static Person[] students;
 	private static Person teacher;
@@ -31,6 +31,7 @@ public class Runner {
 		double GPA = (r3.nextInt(1210)) / 10;
 		
 		//variable is declared and initialized
+		//students teachers and classroom
 		@SuppressWarnings("unused")
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		Student s1 = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
@@ -73,6 +74,7 @@ public class Runner {
 		
 		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, title[r.nextInt(title.length)], 
 				subject[r.nextInt(subject.length)]);
+	
 		Classroom c = new Classroom(students , teacher);
 	
 		
@@ -86,15 +88,16 @@ public class Runner {
 		System.out.println(s19);System.out.println(s20);System.out.println(s21);System.out.println(s22);System.out.println(s23);System.out.println(s24);
 		System.out.println(s25);System.out.println(s26);System.out.println(s27);System.out.println(s28);System.out.println(s29);System.out.println(s30);
 		System.out.println(s31);System.out.println(s32);System.out.println(s33);System.out.println(s34);
+		System.out.println("\n");
 		
+		System.out.println(randomStudent());
 		System.out.println("\n");
 		
 		System.out.println("Class Average:");
 		System.out.println(c.classAverage());
 		
-		System.out.println(randomStudent());
 		
-		
+
 	}
 	
 	public static String randomStudent() {
@@ -117,8 +120,19 @@ public class Runner {
 		
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		
-		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + " " +", GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
+		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + ";" +" GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
 		}
+	
+	public static double classAverage()
+	{ 
+		double total = 0.0;
+		for (Person p : Runner.students) {
+		if (p instanceof Student){
+			total += ((Student) p).getGPA();
+			}
+		}
+		return total/students.length;
+	}
 
 	}
 
