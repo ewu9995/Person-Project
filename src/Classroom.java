@@ -1,3 +1,5 @@
+//Evan Wu and M. Diallo Lab 2.2 Period 2 
+
 public class Classroom {
 	
 	 Person[] students;

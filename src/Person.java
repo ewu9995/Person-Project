@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.lang.Math;
 import java.util.Random;
 
+//Evan Wu and M. Diallo Lab 2.2 Period 2 
 
 public abstract class Person {
 	

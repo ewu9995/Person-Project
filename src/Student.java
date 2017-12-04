@@ -1,5 +1,7 @@
 import java.awt.Color;
 
+//Evan Wu and M. Diallo Lab 2.2 Period 2 
+
 public class Student extends Person{
 	private double GPA;
 	private int ACT;

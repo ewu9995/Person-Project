@@ -1,6 +1,8 @@
 import java.awt.Color;
 import java.util.Random;
 
+//Evan Wu and M. Diallo Lab 2.2 Period 2 
+
 public class Runner {
 
 	//arrays used for the methods
