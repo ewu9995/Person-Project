@@ -27,12 +27,12 @@ public class Runner {
 		
 	
 		//declarations
-		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, title[r.nextInt(title.length)], 
-				subject[r.nextInt(subject.length)]);
+		Teacher t = new Teacher(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor, IQ, 
+				subject[r.nextInt(subject.length)], title[r.nextInt(title.length)]);
 		Classroom c = new Classroom(students , teacher);
 		
 		
-		System.out.println("Subject and Teacher:");
+		System.out.println("Teacher:"); 
 		System.out.println(t.toString());
 		System.out.println("\n");
 		System.out.println("Students:");
@@ -43,12 +43,13 @@ public class Runner {
 			System.out.println(students[i].toString());
 		}
 		
-		System.out.println("\n");
-		System.out.println(randomStudent2());
 	
 		System.out.println("\n");
 		System.out.println("Class Average:");
 		System.out.println(c.classAverage());
+		
+		System.out.println("\n");
+		System.out.println(randomStudent2());
 	}
 		
 
@@ -78,7 +79,7 @@ public class Runner {
 
 		}
 	
-	//randomStudent() used as randomStudent()
+	//randomStudent() used as randomStudent() -- REAL randomStudent() 
 	public static String randomStudent2() {
 		
 		Random r = new Random();
