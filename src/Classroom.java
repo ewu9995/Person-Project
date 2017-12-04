@@ -12,7 +12,7 @@ public class Classroom {
 		return ((Teacher) teacher).getSubject();	 
 	} 
 	
-	public double classAverage()
+	public double classAverage()//method from class
 	{ 
 		double total = 0.0;
 		for(Person p : this.students)
