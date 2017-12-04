@@ -9,7 +9,7 @@ public class Classroom {
 	}
 	
 	public String getSubject() {
-		return ((Teacher) teacher).getSubject();	 
+		return ((Teacher) teacher).getSubject();//casted
 	} 
 	
 	public double classAverage()//method from class
@@ -26,7 +26,7 @@ public class Classroom {
 	
 	
 	public String printClass() {
-		
+		//teacher + the subject they teach + # of students
 		return ((Teacher) teacher).toString() + getSubject() + students.length;
 		
 	}

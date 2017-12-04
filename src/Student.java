@@ -11,6 +11,8 @@ public class Student extends Person{
 		this.GPA = GPA;
 		this.APClasses = APClasses;
 	}
+	
+	//getters and setters for the methods
 	public void setGPA(double GPA) {
 		this.GPA = GPA;
 	}
@@ -35,7 +37,7 @@ public class Student extends Person{
 	
 	@Override
 	public String toString() {
-		return getFamilyName() +"," + " " + getFirstName();
+		return getFamilyName() +"," + " " + getFirstName(); //familyName, firstName ex: Doe, John
 		
 	}
 	

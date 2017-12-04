@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class Runner {
 
+	//arrays used for the methods
 	private static String[] firstName = {"First", "John", "Bob", "Jane", "Sophia", "Olivia", "Emma", "Nathan", "Muhammad", "Elizabeth", "Chloe", "Ava", "Madison", "Amelia", "Victoria", "Joe", "Steve", "Liam", "Noah", "Jake", "Logan", "David"};
 	private static String[] familyName = {"Last", "Doe", "Levin", "Obama", "Asher", "Newman", "Jonhson", "Brown", "Williams", "Paul", "Smith", "Jones" , "Zhang" , "Wang" , "Chang", "Nguyen", "Garcia", "Gonzalez", "Hernandez", "Smith", "Smirnov", "Müller"};
 	private static String[] subject = {"AP Computer Science", "Chemistry", "Biology", "Physics", "English", "AP Calculus", "AP Literature", "Precalculus", "Macroeconomics", "U.S. Government and Politics",  "Physical Education", "AP United States History", "Statistics", "Algebra", "Geometry", "Global Studies"};
@@ -31,14 +32,14 @@ public class Runner {
 		Classroom c = new Classroom(students , teacher);
 		
 		
-		System.out.println("Subject; Teacher:");
+		System.out.println("Subject and Teacher:");
 		System.out.println(t.toString());
 		System.out.println("\n");
 		System.out.println("Students:");
 		
-		for (int i = 0; i < 34; i++)  //loop that prints out 34 students
+		for (int i = 0; i < 34; i++)  //loop that prints out the 34 students' names
 		{
-			students[i] = randomStudent();
+			students[i] = Runner.randomStudent();
 			System.out.println(students[i].toString());
 		}
 		
@@ -52,25 +53,26 @@ public class Runner {
 		
 
 	
-	//randomStudent() used for loop
+	//randomStudent() used for the loop
 	public static Student randomStudent() {
 		
 		Random r = new Random();
 		
-		int ACT = (int)(Math.random())*36+1;
-		int APClasses = (int)(Math.random()*11);
-		int IQ = (int)(Math.random()) * 200 + 1;
+		int ACT = (int)(Math.random())*36+1;//ACT 1-36
+		int APClasses = (int)(Math.random()*11);//Max AP Classes 10?
+		int IQ = (int)(Math.random()) * 200 + 1; //IQ from 1-200 (could be more but most people's IQ's are ~100
 		
-		Random r2 = new Random();
+		Random r2 = new Random();//prints out color RGB whose values can be from 0-256
 		int red = r2.nextInt(256);
 		int green = r2.nextInt(256);
 		int blue = r2.nextInt(256);
-		Color eyeColor = new Color(red,green,blue);
+		Color eyeColor = new Color(red,green,blue); //(0-256,0-256,0-256)
 		
 		Random r3 = new Random();
 		//highest gpa is 100 x 1.1 which is 110
 		double GPA = (r3.nextInt(1210)) / 10;
 		
+		//used in the loop
 		return new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		
 
@@ -97,7 +99,8 @@ public class Runner {
 		
 		Student s = new Student(firstName[r.nextInt(firstName.length)],familyName[r.nextInt(familyName.length)], eyeColor , IQ , GPA, ACT, APClasses);
 		
-		return "Random Student Name: " + s.getFirstName() + " " + s.getFamilyName() + ";" +" GPA to the nearest whole number out of 110 Weighted: " + s.getGPA();
+		//returns first name, last name, GPA
+		return "Random Student's Name: " + s.getFirstName() + " " + s.getFamilyName() + ";" +" Student's Weighted GPA: " + s.getGPA();
 		}
 	
 

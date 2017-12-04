@@ -20,7 +20,7 @@ public abstract class Person {
 		this.IQ = IQ;
 	}
  
-
+	//getters and setters
 	public String getFirstName() {
 		return firstName;
 	}

@@ -11,7 +11,8 @@ public class Teacher extends Person{
 		this.subject = subject;
 		this.title = title;
 	}
-
+	
+	//getters and setters for the methods
 	public String getSubject() {
 		return subject;
 	}
@@ -30,7 +31,7 @@ public class Teacher extends Person{
 	
 	@Override
 	public String toString() {
-		return getTitle() + "." + " "+ getFamilyName();
+		return getTitle() + "." + " "+ getFamilyName(); //title and familyName ex: Mr. Levin
 	}
 
 }
